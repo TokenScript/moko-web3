@@ -38,7 +38,7 @@ dependencies {
 }
 
 // now standard test task use --standalone but it broke network calls
-val newTestTask = tasks.create("iosX64TestWithNetwork") {
+/*val newTestTask = tasks.create("iosX64TestWithNetwork") {
     val linkTask = tasks.getByName("linkDebugTestIosX64") as org.jetbrains.kotlin.gradle.tasks.KotlinNativeLink
     dependsOn(linkTask)
 
@@ -70,4 +70,4 @@ val newTestTask = tasks.create("iosX64TestWithNetwork") {
 with(tasks.getByName("iosX64Test")) {
     dependsOn(newTestTask)
     onlyIf { false }
-}
+}*/
