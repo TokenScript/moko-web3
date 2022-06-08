@@ -11,13 +11,16 @@ plugins {
 }
 
 publishing {
-    repositories.maven("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
+    /*repositories.maven("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/") {
         name = "OSSRH"
 
         credentials {
             username = System.getenv("OSSRH_USER")
             password = System.getenv("OSSRH_KEY")
         }
+    }*/
+    repositories {
+        mavenLocal()
     }
 
     publications.withType<MavenPublication> {
@@ -52,7 +55,7 @@ publishing {
 }
 
 
-signing {
+/*signing {
     val signingKeyId: String? = System.getenv("SIGNING_KEY_ID")
     val signingPassword: String? = System.getenv("SIGNING_PASSWORD")
     val signingKey: String? = System.getenv("SIGNING_KEY")?.let { base64Key ->
@@ -62,4 +65,4 @@ signing {
         useInMemoryPgpKeys(signingKeyId, signingKey, signingPassword)
         sign(publishing.publications)
     }
-}
+}*/
