@@ -19,7 +19,7 @@ jobs:
       with:
         java-version: 11
     - name: Check library
-      run: ./gradlew build publishToMavenLocal #syncMultiPlatformLibraryDebugFrameworkIosX64
+      run: ./gradlew build publishToMavenLocal -x :web3:compileTestDevelopmentExecutableKotlinJs -x :web3:compileTestKotlinJs publishToMavenLocal #syncMultiPlatformLibraryDebugFrameworkIosX64
 #    - name: Install pods with kotlin
 #      run: cd sample/ios-app && pod install
 #    - name: build ios sample
