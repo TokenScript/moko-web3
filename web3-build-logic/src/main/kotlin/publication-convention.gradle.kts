@@ -23,7 +23,7 @@ publishing {
         mavenLocal()
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/SmartTokenLabs/moko-web3")
+            url = uri("https://maven.pkg.github.com/TokenScript/moko-web3")
             credentials {
                 username = System.getenv("GITHUB_ACTOR")
                 password = System.getenv("GITHUB_TOKEN")
