@@ -17,6 +17,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 11
+        cache: 'gradle'
     - name: Build library
       run: ./gradlew build publishToMavenLocal -x :web3:compileTestDevelopmentExecutableKotlinJs -x :web3:compileTestKotlinJs #syncMultiPlatformLibraryDebugFrameworkIosX64
     - name: Publish artifacts
