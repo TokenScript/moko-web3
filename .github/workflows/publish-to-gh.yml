@@ -20,7 +20,7 @@ jobs:
     - name: Build library
       run: ./gradlew build publishToMavenLocal -x :web3:compileTestDevelopmentExecutableKotlinJs -x :web3:compileTestKotlinJs #syncMultiPlatformLibraryDebugFrameworkIosX64
     - name: Publish artifacts
-      run: ./gradlew :web3:publishKotlinMultiplatformPublicationToGitHubPackagesRepository
+      run: ./gradlew publishAllPublicationsToGitHubPackagesRepository
       env:
         GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
